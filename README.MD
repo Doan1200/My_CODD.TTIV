@@ -9,9 +9,9 @@
 3. Số nguyên: 
 
 ``` cpp   
-    - Có dấu: Short, int (-32 to 32k), long (-2 to 2 tỷ)
+    Có dấu: Short, int (-32 to 32k), long (-2 to 2 tỷ)
 
-    - Không dấu: unsigned short, unsigned int (0 to 65k), unsigned long (0 to 4 tỷ)
+    Không dấu: unsigned short, unsigned int (0 to 65k), unsigned long (0 to 4 tỷ)
 ```
 
 4. Số thực: `float, double, long double`
@@ -98,7 +98,7 @@ else
 
 **VÍ DỤ** `x = (5>=3)?1:0`
 
-# BÀI 6: TÌM GIÁ TRỊ LỚN NHẤT VÀ NHỎ NHẤT
+# BÀI 7: TÌM GIÁ TRỊ LỚN NHẤT VÀ NHỎ NHẤT
 
 Nhập vào 2 số nguyên a, b từ bàn phím, xuất ra màn hình giá trị nhỏ nhất và lớn nhất
 
@@ -161,6 +161,55 @@ int main(int argc, const char *argv[])
     return 0;
 }
 ```
+
+# BÀI 11: CÁC HÀM TOÁN HỌC TRONG LẬP TRÌNH C
+
+Thư viện: `math.h`
+
+``` cpp
+ceil(number)        Làm tròn lên
+floor(number)       Làm tròn xuống
+sqrt(number)        Trả về căn bậc 2
+pow(base, exponent) Trả về số mũ đã cho
+abs(number)         Số nguyên Trả về giá trị tuyệt đối
+fabs(number)        Số thực
+```
+# BÀI 12: SỬ DỤNG IF ELSE ĐỂ GIẢI PHƯƠNG TRÌNH BẬC 1
+
+```cpp
+// Nhập vào một con số và cho biết nó lớn hơn hay nhỏ hơn 15
+
+#include <stdio.h>
+
+int main(int argc, const char *argv[])
+{
+    int a, b;
+    float x;
+
+    printf("Nhap vao so a: ");
+    scanf("%d", &a);
+    printf("Nhap vao so b: ");
+    scanf("%d", &b);
+
+    if (a == 0)
+    {
+        printf("Phuong trinh vo so nghiem!");
+    }
+    else
+    {
+        if (b == 0)
+        {
+            printf("Phuong trinh vo nghiem!");
+        }
+        else
+        {
+            x = (float)b / a;
+            printf("Nghiem cua phuong trinh = %.2f", x);
+        }
+    }
+}
+```
+
 
 
 
