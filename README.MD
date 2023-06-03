@@ -260,6 +260,203 @@ int main()
 }
 ```
 
+# BÀI 14: SWITCH CASE
+
+Cấu trúc:
+
+``` cpp
+#include<stdio.h>
+
+int main()
+{
+    int n;
+    printf("Nhap vao so n: ");
+    scanf("%d", &n);
+    switch(n)
+    {
+        case 1:
+            printf("Thu hai");
+            break;
+        case 2:
+            printf("Thu ba");
+            break;
+        case 3:
+            printf("Thu tu");
+            break;
+        case 4:
+            printf("Thu nam");
+            break;
+        case 5:
+            printf("Thu sau");
+            break;
+        case 6:
+            printf("Thu bay");
+            break;
+        case 7:
+            printf("Chu nhat");
+            break;
+        default:
+            printf("Error: Unknown number");
+    }
+
+    return 0;
+}
+```
+
+# BÀI 17: IN RA SỐ NGÀY TRONG THÁNG SỬ DỤNG SWITCH CASE
+
+
+>Bài toán: Viết chương trình nhập tháng năm, hãy tìm ra số ngày trong tháng đó và xuất ra console
+
+**Cách kiểm tra năm nhuận:** ``năm % 400 && năm % 4 && năm % 100 = 1`
+
+``` cpp
+#include <stdio.h>
+
+int main()
+{
+    int thang, nam;
+    printf("Nhap vao thang: ");
+    scanf("%d", &thang);
+    printf("Nhap vao nam: ");
+    scanf("%d", &nam);
+
+    switch (thang)
+    {
+    case 1:
+    case 3:
+    case 5:
+    case 7:
+    case 8:
+    case 10:
+    case 12:
+        printf("Thang co 31 ngay!");
+        break;
+
+    case 4:
+    case 6:
+    case 9:
+    case 11:
+        printf("Thang co 30 ngay!");
+        break;
+
+    case 2:
+        if (nam % 400 == 0 || nam % 4 == 0 && nam % 100 != 0)
+        {
+            printf("Thang co 29 ngay!");
+        }
+        else
+        {
+            printf("Thang co 28 ngay!");
+        }
+        break;
+
+    default:
+    {
+        printf("Error");
+    }
+    }
+    return 0;
+}
+```
+
+# BÀI 18: TÍNH CHU VI VÀ  DIỆN TÍCH TRONG C
+
+``` cpp
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float xa, ya, xb, yb, xc, yc;
+    float AB, BC, CA;
+    float chuvi, dientich, p;
+
+    printf("Nhap vao canh a: ");
+    scanf("%f%f", &xa, &ya);
+    printf("Nhap vao canh b: ");
+    scanf("%f%f", &xb, &yb);
+    printf("Nhap vao canh c: ");
+    scanf("%f%f", &xc, &yc);
+
+    AB = sqrt(pow(xa - xb, 2) + pow(ya - yb, 2));
+    BC = sqrt(pow(xb - xc, 2) + pow(yb - yc, 2));
+    CA = sqrt(pow(xc - xa, 2) + pow(yc - ya, 2));
+
+    float a = AB, b = BC, c = CA;
+
+    // Kiểm tra có phải tam giác
+    if (a + b > c && a + c > b && b + c > a)
+  
+    {
+        // Kiểm tra tam giác có cân
+        if (a == b || b == c || a == c)
+        {
+            printf("day la tam giac can!\n");
+        }
+        else
+        {
+            printf("Day khong phai la tam giac can!\n");
+        }
+        chuvi = a + b + c;
+
+        // Diện tích bằng herong
+
+        p = chuvi/2;
+        printf("Chu vi cua tam giac  = %.2f\n", chuvi);
+
+        dientich = sqrt(p*(p -a)*(p -b)*(p -c));
+        printf("Dien tich cua tam giac = %.2f\n", dientich);
+    }
+    else
+    {
+        printf("Day khong phai la tam giac");
+    }
+    return 0;
+}
+```
+
+# BÀI 21: BẢNG MÃ ASCII VÀ CHỮ CÁI ALPHABET
+
+``` cpp
+#include<stdio.h>
+
+int main(){
+    
+    for(char i = 65; i <=90; i++)
+    {
+        // printf("%c ", i);
+
+        printf("%d - %c\n", i, i );
+    }
+
+    return 0;
+}
+```
+
+# BÀI 22: VÒNG LẶP WHILE
+> Tính tổng từ 1 --> n
+
+``` cpp
+#include<stdio.h>
+
+int main(){
+    int n;
+    printf("Nhap gia tri n: ");
+    scanf("%d",&n);
+
+    int tong = 0;
+    int i = 0;
+    while(i<=n)
+    {
+        tong += i;
+        i++;
+    }
+    printf("Tong = %d", tong);
+    return 0;
+}
+```
+
 
 
 
